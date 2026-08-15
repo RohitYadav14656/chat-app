@@ -49,8 +49,7 @@ app.use('/api/auth',userroute)
 app.use('/api/messages',messageroute)
 
 try {
-  // mongoose.connect('mongodb+srv://root:roots@cluster0.4vgqa8n.mongodb.net/?appName=Cluster0/Chat')
-  await mongoose.connect('mongodb+srv://root:roots@cluster0.4vgqa8n.mongodb.net', {
+  await mongoose.connect(mongourl, {
   dbName: 'Chat'
 })
   console.log('connected successfully')
